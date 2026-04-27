@@ -1,0 +1,848 @@
+==================
+identifier
+==================
+
+{{ name }}
+
+---
+
+(source_file
+  (output
+    (identifier))
+  (text))
+
+==================
+string double quoted
+==================
+
+{{ "hello world" }}
+
+---
+
+(source_file
+  (output
+    (string))
+  (text))
+
+==================
+string single quoted
+==================
+
+{{ 'hello world' }}
+
+---
+
+(source_file
+  (output
+    (string))
+  (text))
+
+==================
+string with escapes
+==================
+
+{{ "hello \"world\"" }}
+
+---
+
+(source_file
+  (output
+    (string))
+  (text))
+
+==================
+integer literal
+==================
+
+{{ 42 }}
+
+---
+
+(source_file
+  (output
+    (integer))
+  (text))
+
+==================
+hex integer
+==================
+
+{{ 0xFF }}
+
+---
+
+(source_file
+  (output
+    (integer))
+  (text))
+
+==================
+float literal
+==================
+
+{{ 3.14 }}
+
+---
+
+(source_file
+  (output
+    (float))
+  (text))
+
+==================
+float with exponent
+==================
+
+{{ 1e10 }}
+
+---
+
+(source_file
+  (output
+    (float))
+  (text))
+
+==================
+boolean true
+==================
+
+{{ true }}
+
+---
+
+(source_file
+  (output
+    (boolean))
+  (text))
+
+==================
+boolean True (Jinja2)
+==================
+
+{{ True }}
+
+---
+
+(source_file
+  (output
+    (boolean))
+  (text))
+
+==================
+boolean false
+==================
+
+{{ false }}
+
+---
+
+(source_file
+  (output
+    (boolean))
+  (text))
+
+==================
+none literal
+==================
+
+{{ none }}
+
+---
+
+(source_file
+  (output
+    (none))
+  (text))
+
+==================
+null literal (Nunjucks/Twig)
+==================
+
+{{ null }}
+
+---
+
+(source_file
+  (output
+    (none))
+  (text))
+
+==================
+empty list
+==================
+
+{{ [] }}
+
+---
+
+(source_file
+  (output
+    (list))
+  (text))
+
+==================
+list with items
+==================
+
+{{ [1, 2, 3] }}
+
+---
+
+(source_file
+  (output
+    (list
+      (integer)
+      (integer)
+      (integer)))
+  (text))
+
+==================
+tuple
+==================
+
+{{ (1, 2) }}
+
+---
+
+(source_file
+  (output
+    (tuple
+      (integer)
+      (integer)))
+  (text))
+
+==================
+single element tuple
+==================
+
+{{ (1,) }}
+
+---
+
+(source_file
+  (output
+    (tuple
+      (integer)))
+  (text))
+
+==================
+dict with colon
+==================
+
+{{ {"key": "val"} }}
+
+---
+
+(source_file
+  (output
+    (dict
+      (pair
+        key: (string)
+        value: (string))))
+  (text))
+
+==================
+binary addition
+==================
+
+{{ a + b }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+binary subtraction
+==================
+
+{{ a - b }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+binary multiplication
+==================
+
+{{ a * b }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+integer division
+==================
+
+{{ a // b }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+modulo
+==================
+
+{{ a % b }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+exponentiation
+==================
+
+{{ a ** b }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+comparison equal
+==================
+
+{{ a == b }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+comparison not equal
+==================
+
+{{ a != b }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+comparison less than
+==================
+
+{{ a < b }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+logical and
+==================
+
+{{ a and b }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+logical or
+==================
+
+{{ a or b }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+membership in
+==================
+
+{{ x in items }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+membership not in
+==================
+
+{{ x not in items }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+concatenation
+==================
+
+{{ a ~ b }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+unary not
+==================
+
+{{ not x }}
+
+---
+
+(source_file
+  (output
+    (unary_expression
+      operand: (identifier)))
+  (text))
+
+==================
+unary negative
+==================
+
+{{ -x }}
+
+---
+
+(source_file
+  (output
+    (unary_expression
+      operand: (identifier)))
+  (text))
+
+==================
+filter expression
+==================
+
+{{ name | lower }}
+
+---
+
+(source_file
+  (output
+    (filter_expression
+      (identifier)
+      name: (identifier)))
+  (text))
+
+==================
+filter chain
+==================
+
+{{ name | lower | truncate(50) | escape }}
+
+---
+
+(source_file
+  (output
+    (filter_expression
+      (call_expression
+        function: (filter_expression
+          (filter_expression
+            (identifier)
+            name: (identifier))
+          name: (identifier))
+        (argument_list
+          (integer)))
+      name: (identifier)))
+  (text))
+
+==================
+filter with keyword argument
+==================
+
+{{ items | join(separator=", ") }}
+
+---
+
+(source_file
+  (output
+    (call_expression
+      function: (filter_expression
+        (identifier)
+        name: (identifier))
+      (argument_list
+        (keyword_argument
+          key: (identifier)
+          value: (string)))))
+  (text))
+
+==================
+test expression
+==================
+
+{{ x is defined }}
+
+---
+
+(source_file
+  (output
+    (test_expression
+      (identifier)
+      name: (identifier)))
+  (text))
+
+==================
+test expression negated
+==================
+
+{{ x is not none }}
+
+---
+
+(source_file
+  (output
+    (test_expression
+      (identifier)
+      name: (identifier)))
+  (text))
+
+==================
+member expression
+==================
+
+{{ user.name }}
+
+---
+
+(source_file
+  (output
+    (member_expression
+      object: (identifier)
+      property: (identifier)))
+  (text))
+
+==================
+chained member expression
+==================
+
+{{ user.profile.avatar }}
+
+---
+
+(source_file
+  (output
+    (member_expression
+      object: (member_expression
+        object: (identifier)
+        property: (identifier))
+      property: (identifier)))
+  (text))
+
+==================
+subscript expression
+==================
+
+{{ items[0] }}
+
+---
+
+(source_file
+  (output
+    (subscript_expression
+      object: (identifier)
+      index: (integer)))
+  (text))
+
+==================
+subscript with string key
+==================
+
+{{ data['key'] }}
+
+---
+
+(source_file
+  (output
+    (subscript_expression
+      object: (identifier)
+      index: (string)))
+  (text))
+
+==================
+call expression
+==================
+
+{{ range(10) }}
+
+---
+
+(source_file
+  (output
+    (call_expression
+      function: (identifier)
+      (argument_list
+        (integer))))
+  (text))
+
+==================
+call with keyword arguments
+==================
+
+{{ url_for(endpoint="index", page=1) }}
+
+---
+
+(source_file
+  (output
+    (call_expression
+      function: (identifier)
+      (argument_list
+        (keyword_argument
+          key: (identifier)
+          value: (string))
+        (keyword_argument
+          key: (identifier)
+          value: (integer)))))
+  (text))
+
+==================
+method call
+==================
+
+{{ items.append(x) }}
+
+---
+
+(source_file
+  (output
+    (call_expression
+      function: (member_expression
+        object: (identifier)
+        property: (identifier))
+      (argument_list
+        (identifier))))
+  (text))
+
+==================
+conditional expression (Jinja2)
+==================
+
+{{ x if condition else y }}
+
+---
+
+(source_file
+  (output
+    (conditional_expression
+      value: (identifier)
+      condition: (identifier)
+      alternative: (identifier)))
+  (text))
+
+==================
+conditional expression (Twig ternary)
+==================
+
+{{ condition ? x : y }}
+
+---
+
+(source_file
+  (output
+    (conditional_expression
+      condition: (identifier)
+      consequence: (identifier)
+      alternative: (identifier)))
+  (text))
+
+==================
+parenthesized expression
+==================
+
+{{ (a + b) * c }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (parenthesized_expression
+        (binary_expression
+          left: (identifier)
+          right: (identifier)))
+      right: (identifier)))
+  (text))
+
+==================
+precedence arithmetic over comparison
+==================
+
+{{ a + b == c }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (binary_expression
+        left: (identifier)
+        right: (identifier))
+      right: (identifier)))
+  (text))
+
+==================
+precedence multiplication over addition
+==================
+
+{{ a + b * c }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (binary_expression
+        left: (identifier)
+        right: (identifier))))
+  (text))
+
+==================
+Twig strict equality
+==================
+
+{{ a === b }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+Twig null coalesce
+==================
+
+{{ a ?? b }}
+
+---
+
+(source_file
+  (output
+    (binary_expression
+      left: (identifier)
+      right: (identifier)))
+  (text))
+
+==================
+Twig safe navigation
+==================
+
+{{ obj?.prop }}
+
+---
+
+(source_file
+  (output
+    (member_expression
+      object: (identifier)
+      property: (identifier)))
+  (text))
+
+==================
+spread argument
+==================
+
+{{ fn(**kwargs) }}
+
+---
+
+(source_file
+  (output
+    (call_expression
+      function: (identifier)
+      (argument_list
+        (spread_argument
+          (identifier)))))
+  (text))
+
+==================
+Twig keyword argument with colon
+==================
+
+{{ fn(key: value) }}
+
+---
+
+(source_file
+  (output
+    (call_expression
+      function: (identifier)
+      (argument_list
+        (keyword_argument
+          key: (identifier)
+          value: (identifier)))))
+  (text))

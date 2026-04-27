@@ -1,0 +1,117 @@
+==================
+Nunjucks 11ty layout
+==================
+
+{% extends "base.njk" %}
+{% block content %}
+  <h1>{{ title }}</h1>
+  {% for post in collections.posts %}
+    <article>
+      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    </article>
+  {% endfor %}
+{% endblock %}
+
+---
+
+(source_file
+  (statement
+    (extends_statement
+      (string)))
+  (statement
+    (block_statement
+      name: (identifier)
+      (text)
+      (output
+        (identifier))
+      (text)
+      (statement
+        (for_statement
+          variable: (identifier)
+          iterable: (member_expression
+            object: (identifier)
+            property: (identifier))
+          (text)
+          (output
+            (member_expression
+              object: (identifier)
+              property: (identifier)))
+          (text)
+          (output
+            (member_expression
+              object: (member_expression
+                object: (identifier)
+                property: (identifier))
+              property: (identifier)))
+          (text)))))
+  (text))
+
+==================
+Jinja2 Flask template
+==================
+
+{% if current_user.is_authenticated %}
+  <span>Welcome, {{ current_user.name | escape }}</span>
+{% else %}
+  <a href="{{ url_for('login') }}">Log in</a>
+{% endif %}
+
+---
+
+(source_file
+  (statement
+    (if_statement
+      condition: (member_expression
+        object: (identifier)
+        property: (identifier))
+      (text)
+      (output
+        (filter_expression
+          (member_expression
+            object: (identifier)
+            property: (identifier))
+          name: (identifier)))
+      (text)
+      (else_clause)
+      (text)
+      (output
+        (call_expression
+          function: (identifier)
+          (argument_list
+            (string))))
+      (text)))
+  (text))
+
+==================
+Jinja2 macro with defaults
+==================
+
+{% macro input(name, value="", type="text") %}
+  <input type="{{ type }}" name="{{ name }}" value="{{ value }}">
+{% endmacro %}
+
+---
+
+(source_file
+  (statement
+    (macro_statement
+      name: (identifier)
+      (argument_list
+        (identifier)
+        (keyword_argument
+          key: (identifier)
+          value: (string))
+        (keyword_argument
+          key: (identifier)
+          value: (string)))
+      (text)
+      (output
+        (identifier))
+      (text)
+      (output
+        (identifier))
+      (text)
+      (output
+        (identifier))
+      (text)))
+  (text))

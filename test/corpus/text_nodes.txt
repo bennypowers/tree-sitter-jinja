@@ -1,0 +1,60 @@
+==================
+text around output
+==================
+
+<div>{{ x }}</div>
+
+---
+
+(source_file
+  (text)
+  (output
+    (identifier))
+  (text))
+
+==================
+text between statements
+==================
+
+hello{% if x %}world{% endif %}!
+
+---
+
+(source_file
+  (text)
+  (statement
+    (if_statement
+      condition: (identifier)
+      (text)))
+  (text))
+
+==================
+text with curly braces
+==================
+
+<style>body { color: red; }</style>{{ x }}
+
+---
+
+(source_file
+  (text)
+  (output
+    (identifier))
+  (text))
+
+==================
+text in html attribute with output
+==================
+
+<div class="{{ cls }}">{{ content }}</div>
+
+---
+
+(source_file
+  (text)
+  (output
+    (identifier))
+  (text)
+  (output
+    (identifier))
+  (text))

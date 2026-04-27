@@ -1,0 +1,79 @@
+==================
+output trim left
+==================
+
+{{- name }}
+
+---
+
+(source_file
+  (output
+    (identifier))
+  (text))
+
+==================
+output trim right
+==================
+
+{{ name -}}
+
+---
+
+(source_file
+  (output
+    (identifier))
+  (text))
+
+==================
+output trim both
+==================
+
+{{- name -}}
+
+---
+
+(source_file
+  (output
+    (identifier))
+  (text))
+
+==================
+statement trim
+==================
+
+{%- if x -%}hello{%- endif -%}
+
+---
+
+(source_file
+  (statement
+    (if_statement
+      condition: (identifier)
+      (text)))
+  (text))
+
+==================
+comment trim
+==================
+
+{#- trimmed comment -#}
+
+---
+
+(source_file
+  (comment
+    (comment_content))
+  (text))
+
+==================
+Twig tilde trim
+==================
+
+{{~ name ~}}
+
+---
+
+(source_file
+  (output
+    (identifier))
+  (text))

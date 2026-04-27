@@ -1,0 +1,54 @@
+==================
+raw block
+==================
+
+{% raw %}{{ not parsed }}{% endraw %}
+
+---
+
+(source_file
+  (statement
+    (raw_statement
+      (raw_text)))
+  (text))
+
+==================
+raw block with template syntax
+==================
+
+{% raw %}{% if x %}{{ y }}{# z #}{% endraw %}
+
+---
+
+(source_file
+  (statement
+    (raw_statement
+      (raw_text)))
+  (text))
+
+==================
+verbatim block (Twig)
+==================
+
+{% verbatim %}{{ not parsed }}{% endverbatim %}
+
+---
+
+(source_file
+  (statement
+    (raw_statement
+      (raw_text)))
+  (text))
+
+==================
+empty raw block
+==================
+
+{% raw %}{% endraw %}
+
+---
+
+(source_file
+  (statement
+    (raw_statement))
+  (text))

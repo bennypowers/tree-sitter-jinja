@@ -1,0 +1,37 @@
+==================
+basic comment
+==================
+
+{# this is a comment #}
+
+---
+
+(source_file
+  (comment
+    (comment_content))
+  (text))
+
+==================
+comment with hash inside
+==================
+
+{# comment with # hash #}
+
+---
+
+(source_file
+  (comment
+    (comment_content))
+  (text))
+
+==================
+empty comment
+==================
+
+{##}
+
+---
+
+(source_file
+  (comment)
+  (text))
