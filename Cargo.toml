@@ -1,7 +1,7 @@
 [package]
 name = "tree-sitter-jinja-dialects"
 description = "Parser for Jinja2 and daughter languages: nunjucks, twig"
-version = "0.1.1"
+version = "0.1.0"
 authors = ["Benny Powers <web@bennypowers.com>"]
 license = "MIT"
 readme = "README.md"
