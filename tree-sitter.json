@@ -30,8 +30,7 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/bennypowers/tree-sitter-jinja",
-      "funding": ""
+      "repository": "https://github.com/bennypowers/tree-sitter-jinja"
     }
   },
   "bindings": {
