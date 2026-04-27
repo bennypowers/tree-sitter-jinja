@@ -1,4 +1,4 @@
-module github.com/bennypowers/tree-sitter-jinja
+module bennypowers.dev/tree-sitter-jinja-dialects
 
 go 1.22
 

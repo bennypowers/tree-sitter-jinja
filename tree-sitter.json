@@ -30,7 +30,7 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/bennypowers/tree-sitter-jinja"
+      "repository": "https://github.com/bennypowers/tree-sitter-jinja-dialects"
     }
   },
   "bindings": {

@@ -25,7 +25,7 @@ type NodeInfo =
  *
  * @example
  * import Parser from "tree-sitter";
- * import Jinja from "tree-sitter-jinja";
+ * import Jinja from "tree-sitter-jinja-dialects";
  *
  * const parser = new Parser();
  * parser.setLanguage(Jinja);

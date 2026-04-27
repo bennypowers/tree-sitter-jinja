@@ -1,11 +1,11 @@
 {
-  "name": "tree-sitter-jinja",
+  "name": "tree-sitter-jinja-dialects",
   "version": "0.1.1",
   "description": "Parser for Jinja2 and daughter languages: nunjucks, twig",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bennypowers/tree-sitter-jinja.git"
+    "url": "git+https://github.com/bennypowers/tree-sitter-jinja-dialects.git"
   },
   "funding": "",
   "license": "MIT",

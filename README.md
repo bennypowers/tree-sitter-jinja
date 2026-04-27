@@ -1,4 +1,4 @@
-# tree-sitter-jinja
+# tree-sitter-jinja-dialects
 
 A [tree-sitter](https://tree-sitter.github.io/) grammar for the Jinja template
 language family.
@@ -84,7 +84,7 @@ require('nvim-treesitter.configs').setup {
 
 ```js
 const Parser = require('tree-sitter');
-const Jinja = require('tree-sitter-jinja');
+const Jinja = require('tree-sitter-jinja-dialects');
 
 const parser = new Parser();
 parser.setLanguage(Jinja);
